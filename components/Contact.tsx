@@ -56,7 +56,7 @@ export default function Contact() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            Ready to start your next project? Contact us today and let's build something amazing together.
+            Ready to start your next project? Contact us today - we're available 24/7!
           </motion.p>
         </motion.div>
         
@@ -139,17 +139,20 @@ export default function Contact() {
               {
                 icon: <FaEnvelope className="text-2xl" />,
                 title: "Email Us",
-                items: ["contact@swatrix.com", "support@swatrix.com"]
+                items: ["info@swatrix.com", "support@swatrix.com"],
+                description: "Available 24/7"
               },
               {
                 icon: <FaPhone className="text-2xl" />,
                 title: "Call Us",
-                items: ["+1 (123) 456-7890", "+1 (987) 654-3210"]
+                items: ["070 441 4832", "076 159 7810"],
+                description: "24/7 Support"
               },
               {
                 icon: <FaMapMarkerAlt className="text-2xl" />,
                 title: "Visit Us",
-                items: ["123 Tech Park Avenue", "Silicon Valley, CA 94000"]
+                items: ["No 36 Dharmarama Road", "Wellawatta, Colombo 06"],
+                description: "Sri Lanka"
               }
             ].map((contact, index) => (
               <motion.div 
@@ -167,7 +170,8 @@ export default function Contact() {
                   {contact.icon}
                 </motion.div>
                 <div>
-                  <h3 className="text-xl font-bold mb-3 text-white">{contact.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-white">{contact.title}</h3>
+                  <p className="text-sm text-gray-400 mb-2">{contact.description}</p>
                   {contact.items.map((item, i) => (
                     <p key={i} className="text-gray-300 hover:text-white transition-colors">
                       {item}
